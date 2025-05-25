@@ -385,7 +385,7 @@ function showShortcutHint(text, direction) {
     // 两秒后隐藏
     shortcutHintTimeout = setTimeout(() => {
         hintElement.classList.remove('show');
-    }, 100);
+    }, 800);
 }
 
 // 初始化播放器
