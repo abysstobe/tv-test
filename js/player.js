@@ -302,7 +302,6 @@ function handleKeyboardShortcuts(e) {
     if (!e.altKey && e.key === 'ArrowLeft') {
         if (art && art.currentTime > 5) {
             art.currentTime -= 5;
-            showShortcutHint('快退', 'left');
             e.preventDefault();
         }
     }
@@ -311,7 +310,6 @@ function handleKeyboardShortcuts(e) {
     if (!e.altKey && e.key === 'ArrowRight') {
         if (art && art.currentTime < art.duration - 5) {
             art.currentTime += 5;
-            showShortcutHint('快进', 'right');
             e.preventDefault();
         }
     }
@@ -387,7 +385,7 @@ function showShortcutHint(text, direction) {
     // 两秒后隐藏
     shortcutHintTimeout = setTimeout(() => {
         hintElement.classList.remove('show');
-    }, 2000);
+    }, 1000);
 }
 
 // 初始化播放器
